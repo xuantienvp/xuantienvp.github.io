@@ -8,22 +8,29 @@ body{
 }
 audio{margin:0px auto;display: block;}
 #clock{
-  	font-size: 50px;
+  	font-size: 35px;
   	border: 1px solid #FFF;
 	padding: 10px;
 	margin: 5px 0px;
 	background: #fff;
 	font-family: sans-serif;
-	color: #FF1493
+	color: #FF1493;
+	border-radius: 10px;
 }
 h2{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 40px
+	font-size: 35px
+}
+h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	color: #FF1493
 }
 .desc{
 	text-align: left;
 	display: block;
-	font-size: 22px;
+	font-size: 18px;
+	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 }
 .avatar{
