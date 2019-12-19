@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Nguyễn Xuân Tiến</title>
-<meta charset="utf-8"/>
-<style type="text/css">
-	.container {
-	  width: 500px;
-	  margin: auto;
-	  text-align: center;
-	}
-	p {
-	  font-size: 22px;
-	}
-</style>
+	<title>Phạm Thị Tuyết Mai</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 	<div class="container">
-	  <h2>Welcome my site</h2>
-	   
-	  <p id="demo">Nguyễn Xuân Tiến</p>
-
+		<img src="img/tuyetmai.jpg" class="avatar" alt="Phạm Thị Tuyết Mai">
+		<span class="desc">Còn</span>
+		<p id="clock"></p>
+		<span class="desc">Thì chúng mình được gặp nhau rồi</span>
 	</div>
+	<audio controls autoplay>
+	  <source src="audio/ngayhanhphuc.ogg" type="audio/ogg">
+	  <source src="audio/ngayhanhphuc.mp3" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+	<script>
+	  // Thiết lập thời gian đích mà ta sẽ đếm
+	  var countDownDate = new Date("Jan 26, 2020 10:10:10").getTime();
+	 
+	  // cập nhập thời gian sau mỗi 1 giây
+	  var x = setInterval(function() {
+	 
+	    // Lấy thời gian hiện tại
+	    var now = new Date().getTime();
+	 
+	    // Lấy số thời gian chênh lệch
+	    var distance = countDownDate - now;
+	 
+	    // Tính toán số ngày, giờ, phút, giây từ thời gian chênh lệch
+	    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	 
+	    // HIển thị chuỗi thời gian trong thẻ p
+	    document.getElementById("clock").innerHTML = days + "Ngày " + hours + "Giờ "
+	    + minutes + "Phút " + seconds + "Giây ";
+	 
+	    // Nếu thời gian kết thúc, hiển thị chuỗi thông báo
+	    if (distance < 0) {
+	      clearInterval(x);
+	      document.getElementById("clock").innerHTML = "Thời gian đếm ngược đã kết thúc";
+	    }
+	  }, 1000);
+	</script>
 </body>
 </html>
