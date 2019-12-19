@@ -1,14 +1,20 @@
+body{
+	background: #FFB6C1
+}
 .container {
   	width: 500px;
   	margin: 100px auto;
   	text-align: center;
 }
-audio{display: none;}
+audio{margin:0px auto;display: block;}
 #clock{
   	font-size: 50px;
-  	border: 1px solid #ccc;
+  	border: 1px solid #FFF;
 	padding: 10px;
 	margin: 5px 0px;
+	background: #fff;
+	font-family: sans-serif;
+	color: #FF1493
 }
 h2{
 	font-family: 'Montserrat', sans-serif;
@@ -17,14 +23,14 @@ h2{
 .desc{
 	text-align: left;
 	display: block;
-	font-size: 18px;
+	font-size: 22px;
 	font-family: 'Montserrat', sans-serif;
 }
 .avatar{
 	width:200px;
-		height:200px;
-		object-fit:cover;
-		border-radius:50%;
+	height:200px;
+	object-fit:cover;
+	border-radius:50%;
 }
 @media (max-width: 767px) {
 	.container {
